@@ -5,7 +5,8 @@ import (
   "fmt"
   // "io/ioutil"
   "io"
-  "os"
+  // "os"
+  "go/printer"
 )
 
 func main() {
@@ -17,7 +18,7 @@ fmt.Println("ERROR")
 defer resp.Body.Close()
 fmt.Println(resp)
 // body, err := ioutil.ReadAll(resp.Body)
-out, err := os.Create("filename.html")
-io.Copy(out, resp.Body)
-
+// out, err := os.Create("filename.html")
+// io.Copy(out, resp.Body)
+ printer.Fprint(resp.Body)
 }
