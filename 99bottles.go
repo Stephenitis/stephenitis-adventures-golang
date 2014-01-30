@@ -10,9 +10,9 @@ func main() {
   say(bottlesOfBeer)
 }
 
-func say(num int) () {
-  removeBeer()
+func say(num int) {
   fmt.Println(fmt.Sprintf("%d bottles of beer", num))
+  removeBeer()
 }
 
 func removeBeer() {
